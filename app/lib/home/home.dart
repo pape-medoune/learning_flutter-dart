@@ -7,23 +7,37 @@ class Home_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.green,
-          title: const Text("Mon navbar"),    
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              color : Colors.purple,
-              height: 500,
-            ),
-            Container(
-              color : Color.fromARGB(163, 85, 96, 251),
-              height: 500,
-            )
-          ],
+          toolbarHeight: 95,
+          backgroundColor: Color.fromARGB(255, 255, 0, 0),
+          title: Text("Mon navbar"),
         ),
-      ),
+        body: SingleChildScrollView(
+          child: Stack(
+            // child: Stack(
+              children: [
+                Image.asset(
+                 "assets/images/gaming.jpg",
+                 fit: BoxFit.cover,
+                 color: Color.fromARGB(118, 5, 5, 5),
+                 colorBlendMode: BlendMode.darken,
+                )
+              ],
+            // ),
+            // children: [
+            //   Container(
+            //     color: Colors.grey,
+            //     height: 500,
+            //   ),
+            //   Container(
+            //     color: Colors.yellow,
+            //     height: 500,
+            //   ),
+            // ],
+          ),
+        ),
+        bottomNavigationBar: const Row(
+
+        ),
     );
   }
 }
